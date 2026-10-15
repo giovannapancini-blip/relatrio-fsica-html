@@ -165,7 +165,7 @@
       <p>Este projeto investiga, de forma sistemática, quais variáveis determinam o período de um pêndulo simples,
         aplicando conceitos de Movimento Harmônico Simples (MHS),
         medidas de tempo, construção de gráficos e análise quantitativa, com base nas Leis de Newton.</p>
-    <p>Desenvolvido por:  <b>ANA YUMI MATSUSATO PEREIRA; ANELISA DE OLIVEIRA SANTOS; ENZO SÉRGIO GODOY HERNANDES; GIOVANNA FIGUEIREDO ZACARIAS PANCINI; NICOLLAS EDUARDO APOLÔNIO SANTOS.</b></p>
+    <p>Desenvolvido por:  <b>ANA YUMI MATSUSATO PEREIRA; ANELISA DE OLIVEIRA SANTOS; ENZO SÉRGIO GODOY HERNANDES; GIOVANNA FIGUEIREDO ZACARIAS PANCINI; NICOLLAS EDUARDO APOLÔNIO SANTOS.</b> </p>
     </section>
 
     <!-- Seção 2: fundamentos -->
@@ -353,437 +353,538 @@
         </tbody>
     </table>
 <br>
-    <title>Tabela de Variação de Comprimento</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            color: #000;
-        }
-        h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 16px;
-        }
-        th, td {
-            border: 1px solid #cccccc;
-            text-align: left;
-            padding: 12px 10px;
-        }
-        th {
-            background-color: #9ec5e6; /* Tom de azul idêntico ao da imagem */
-            color: #000000;
-            font-weight: normal;
-        }
-        .bold-col {
-            font-weight: bold;
-        }
-    </style>
+<br>
+  <title>Gráfico T X L</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #555;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    /* Estilização da Tabela Gráfica */
+    .grafico-tabela {
+      border-collapse: collapse;
+      width: 100%;
+      position: relative;
+    }
+
+    .grafico-tabela td {
+      border: 1px solid #e0e0e0;
+      height: 45px;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    /* Rótulos dos eixos */
+    .eixo-y {
+      width: 50px;
+      text-align: right !important;
+      padding-right: 10px;
+      border: none !important;
+      color: #555;
+    }
+
+    .eixo-x td {
+      border: none !important;
+      height: 30px;
+      color: #555;
+    }
+
+    /* Estilo dos pontos no gráfico */
+    .ponto {
+      width: 10px;
+      height: 10px;
+      background-color: #4682B4;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      transform: translate(-50%, 50%);
+    }
+
+    /* Posições dos pontos dentro das células correspondentes */
+    .ponto-1 { left: 0%; bottom: 65%; } /* (0,20 ; 0,83) */
+    .ponto-2 { left: 0%; bottom: 33%; } /* (0,30 ; 1,17) */
+    .ponto-3 { left: 0%; bottom: 84%; } /* (0,40 ; 1,42) */
+    .ponto-4 { left: 0%; bottom: 25%; } /* (0,50 ; 1,62) */
+    .ponto-5 { left: 0%; bottom: 75%; } /* (0,60 ; 1,87) */
+    .ponto-6 { left: 0%; bottom: 0%;  } /* (0,70 ; 2,00) */
+
+    /* Caixas de texto da equação e R² */
+    .info-equacao {
+      position: absolute;
+      top: 15px;
+      right: 40px;
+      color: #555;
+      font-size: 14px;
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
 
-    <h2>2. Variação de Comprimento (m)</h2>
+<div class="container">
+  <h2>Gráfico T X L</h2>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Comprimento (m)</th>
-                <th>Medida 1 (s)</th>
-                <th>Medida 2 (s)</th>
-                <th>Medida 3 (s)</th>
-                <th>Medida 4 (s)</th>
-                <th>Medida 5 (s)</th>
-                <th>Média (s)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>0,20</td>
-                <td>8,00</td>
-                <td>8,30</td>
-                <td>8,34</td>
-                <td>8,26</td>
-                <td>8,32</td>
-                <td class="bold-col">8,24</td>
-            </tr>
-            <tr>
-                <td>0,40</td>
-                <td>11,63</td>
-                <td>11,60</td>
-                <td>11,64</td>
-                <td>11,68</td>
-                <td>11,61</td>
-                <td class="bold-col">11,63</td>
-            </tr>
-            <tr>
-                <td>0,60</td>
-                <td>14,23</td>
-                <td>14,09</td>
-                <td>14,24</td>
-                <td>14,12</td>
-                <td>14,18</td>
-                <td class="bold-col">14,17</td>
-            </tr>
-            <tr>
-                <td>0,80</td>
-                <td>16,00</td>
-                <td>16,48</td>
-                <td>16,40</td>
-                <td>16,15</td>
-                <td>16,00</td>
-                <td class="bold-col">16,21</td>
-            </tr>
-            <tr>
-                <td>1,00</td>
-                <td>18,63</td>
-                <td>18,71</td>
-                <td>18,57</td>
-                <td>18,74</td>
-                <td>18,83</td>
-                <td class="bold-col">18,70</td>
-            </tr>
-            <tr>
-                <td>1,20</td>
-                <td>19,94</td>
-                <td>19,91</td>
-                <td>20,02</td>
-                <td>19,98</td>
-                <td>19,98</td>
-                <td class="bold-col">19,97</td>
-            </tr>
-        </tbody>
-    </table>
-<br>
-    <title>Tabela de Variação de Ângulo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            color: #000;
-        }
-        h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 16px;
-        }
-        th, td {
-            border: 1px solid #cccccc;
-            text-align: left;
-            padding: 12px 10px;
-        }
-        th {
-            background-color: #9ec5e6; /* Tom de azul idêntico ao da imagem */
-            color: #000000;
-            font-weight: normal;
-        }
-        .bold-col {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    <h2>3. Variação de Ângulo (°)</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Ângulo (°)</th>
-                <th>Medida 1 (s)</th>
-                <th>Medida 2 (s)</th>
-                <th>Medida 3 (s)</th>
-                <th>Medida 4 (s)</th>
-                <th>Medida 5 (s)</th>
-                <th>Média (s)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>5</td>
-                <td>14,05</td>
-                <td>14,12</td>
-                <td>13,91</td>
-                <td>14,05</td>
-                <td>14,03</td>
-                <td class="bold-col">14,03</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>14,07</td>
-                <td>14,11</td>
-                <td>14,18</td>
-                <td>14,04</td>
-                <td>14,01</td>
-                <td class="bold-col">14,08</td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td>14,09</td>
-                <td>14,19</td>
-                <td>13,91</td>
-                <td>13,92</td>
-                <td>14,03</td>
-                <td class="bold-col">14,03</td>
-            </tr>
-            <tr>
-                <td>30</td>
-                <td>14,17</td>
-                <td>13,90</td>
-                <td>13,97</td>
-                <td>14,11</td>
-                <td>14,04</td>
-                <td class="bold-col">14,04</td>
-            </tr>
-            <tr>
-                <td>45</td>
-                <td>13,97</td>
-                <td>14,19</td>
-                <td>14,10</td>
-                <td>14,09</td>
-                <td>14,09</td>
-                <td class="bold-col">14,09</td>
-            </tr>
-            <tr>
-                <td>60</td>
-                <td>14,05</td>
-                <td>14,10</td>
-                <td>14,13</td>
-                <td>14,06</td>
-                <td>14,02</td>
-                <td class="bold-col">14,07</td>
-            </tr>
-        </tbody>
-    </table>
-<br>
-    <title>Tabela das Médias</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            color: #000;
-        }
-        h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 16px;
-        }
-        th, td {
-            border: 1px solid #cccccc;
-            text-align: left;
-            padding: 12px 10px;
-        }
-        th {
-            background-color: #9ec5e6; /* Tom de azul idêntico ao da imagem */
-            color: #000000;
-            font-weight: normal;
-        }
-        .bold-col {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    <h2>Tabela das Médias</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Variável Testada</th>
-                <th>Valor Real</th>
-                <th>Escala Relativa (0 a 1)</th>
-                <th>Tempo / Período Médio (s)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Massa</td>
-                <td>30,78</td>
-                <td>0,00</td>
-                <td class="bold-col">14,11</td>
-            </tr>
-            <tr>
-                <td>Massa</td>
-                <td>50,79</td>
-                <td>0,36</td>
-                <td class="bold-col">14,03</td>
-            </tr>
-            <tr>
-                <td>Massa</td>
-                <td>79,33</td>
-                <td>0,88</td>
-                <td class="bold-col">14,18</td>
-            </tr>
-            <tr>
-                <td>Massa</td>
-                <td>85,78</td>
-                <td>1,00</td>
-                <td class="bold-col">14,12</td>
-            </tr>
-            <tr>
-                <td>Ângulo</td>
-                <td>5</td>
-                <td>0,00</td>
-                <td class="bold-col">14,03</td>
-            </tr>
-            <tr>
-                <td>Ângulo</td>
-                <td>10</td>
-                <td>0,09</td>
-                <td class="bold-col">14,08</td>
-            </tr>
-            <tr>
-                <td>Ângulo</td>
-                <td>20</td>
-                <td>0,27</td>
-                <td class="bold-col">14,03</td>
-            </tr>
-            <tr>
-                <td>Ângulo</td>
-                <td>30</td>
-                <td>0,45</td>
-                <td class="bold-col">14,04</td>
-            </tr>
-            <tr>
-                <td>Ângulo</td>
-                <td>45</td>
-                <td>0,73</td>
-                <td class="bold-col">14,09</td>
-            </tr>
-            <tr>
-                <td>Ângulo</td>
-                <td>60</td>
-                <td>1,00</td>
-                <td class="bold-col">14,07</td>
-            </tr>
-            <tr>
-                <td>Comprimento</td>
-                <td>0,20</td>
-                <td>0,00</td>
-                <td class="bold-col">8,24</td>
-            </tr>
-            <tr>
-                <td>Comprimento</td>
-                <td>0,40</td>
-                <td>0,20</td>
-                <td class="bold-col">11,63</td>
-            </tr>
-            <tr>
-                <td>Comprimento</td>
-                <td>0,60</td>
-                <td>0,40</td>
-                <td class="bold-col">14,17</td>
-            </tr>
-            <tr>
-                <td>Comprimento</td>
-                <td>0,80</td>
-                <td>0,60</td>
-                <td class="bold-col">16,21</td>
-            </tr>
-            <tr>
-                <td>Comprimento</td>
-                <td>1,00</td>
-                <td>0,80</td>
-                <td class="bold-col">18,70</td>
-            </tr>
-            <tr>
-                <td>Comprimento</td>
-                <td>1,20</td>
-                <td>1,00</td>
-                <td class="bold-col">19,97</td>
-            </tr>
-        </tbody>
-    </table>
-<br>
-<br>
-      <img src="https://i.ibb.co/qFBhMFjL/grafico.jpg" alt="Gráfico" width="800px" height="400px">
-     <br>
-     <br>
-    <title>Legenda do Gráfico</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            color: #000;
-            font-size: 16px;
-        }
-        .legenda-container {
-            line-height: 2;
-        }
-        .legenda-titulo {
-            font-weight: bold;
-        }
-        .legenda-item {
-            display: flex;
-            align-items: center;
-            margin-left: 40px; /* Alinhamento recuado identico à imagem */
-            margin-bottom: 8px;
-        }
-        /* Definição das Formas Geométricas em CSS */
-        .forma {
-            display: inline-block;
-            margin-right: 8px;
-        }
-        .losango {
-            width: 10px;
-            height: 10px;
-            background-color: #d4af37; /* Amarelo escuro/dourado para leitura */
-            transform: rotate(45deg);
-        }
-        .quadrado {
-            width: 10px;
-            height: 10px;
-            background-color: #1e60aa;
-        }
-        .triangulo {
-            width: 0;
-            height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-bottom: 11px solid #b22222;
-        }
-        /* Cores dos Textos */
-        .txt-amarelo { color: #b89214; }
-        .txt-azul { color: #1e60aa; }
-        .txt-vermelho { color: #b22222; }
-    </style>
-</head>
-<body>
-
-    <div class="legenda-container">
-        <span class="legenda-titulo">Legenda:</span>
-        
-        <div class="legenda-item txt-amarelo">
-            <span class="forma losango"></span>
-            amarelo (losango) = massa
-        </div>
-        
-        <div class="legenda-item txt-azul">
-            <span class="forma quadrado"></span>
-            azul (quadrado) = amplitude
-        </div>
-        
-        <div class="legenda-item txt-vermelho">
-            <span class="forma triangulo"></span>
-            vermelho (triângulo) = comprimento
-        </div>
+  <div style="position: relative;">
+    <!-- Informações da linha de tendência -->
+    <div class="info-equacao">
+      y = 3,1736x<br>
+      R² = 0,989
     </div>
 
-    <br>
+    <!-- Tabela representando a grade do gráfico -->
+    <table class="grafico-tabela">
+      <tr>
+        <td class="eixo-y">2,5</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">2</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+        <td><span class="ponto ponto-6"></span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">1,5</td>
+        <td></td><td></td><td></td><td></td>
+        <td><span class="ponto ponto-4"></span></td>
+        <td><span class="ponto ponto-5"></span></td>
+        <td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">1</td>
+        <td></td><td></td>
+        <td><span class="ponto ponto-1"></span></td>
+        <td><span class="ponto ponto-2"></span></td>
+        <td><span class="ponto ponto-3"></span></td>
+        <td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">0,5</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">0</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <!-- Rótulos do Eixo X -->
+      <tr class="eixo-x">
+        <td></td>
+        <td>0,00</td>
+        <td>0,10</td>
+        <td>0,20</td>
+        <td>0,30</td>
+        <td>0,40</td>
+        <td>0,50</td>
+        <td>0,60</td>
+        <td>0,70</td>
+        <td>0,80</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
 
 
+
+  <br>
+  <title>Gráfico de p² com Tabela</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #555;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    /* Estilização da Tabela Gráfica */
+    .grafico-tabela {
+      border-collapse: collapse;
+      width: 100%;
+      position: relative;
+    }
+
+    .grafico-tabela td {
+      border: 1px solid #e0e0e0;
+      height: 45px;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    /* Rótulos dos eixos */
+    .eixo-y {
+      width: 50px;
+      text-align: right !important;
+      padding-right: 10px;
+      border: none !important;
+      color: #555;
+    }
+
+    .eixo-x td {
+      border: none !important;
+      height: 30px;
+      color: #555;
+    }
+
+    /* Estilo dos pontos no gráfico */
+    .ponto {
+      width: 10px;
+      height: 10px;
+      background-color: #4682B4;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      transform: translate(-50%, 50%);
+    }
+
+    /* Posições dos pontos dentro das células */
+    .ponto-1 { left: 0%; bottom: 40%; }
+    .ponto-2 { left: 0%; bottom: 70%; }
+    .ponto-3 { left: 0%; bottom: 04%; }
+    .ponto-4 { left: 0%; bottom: 30%; }
+    .ponto-5 { left: 0%; bottom: 00%; }
+    .ponto-6 { left: 0%; bottom: 00%; }
+
+    /* Caixas de texto da equação e R² */
+    .info-equacao {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      color: #555;
+      font-size: 14px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Grafico de p²</h2>
+
+  <div style="position: relative;">
+    <!-- Informações da linha de tendência -->
+    <div class="info-equacao">
+      y = 5,4309x<br>
+      R² = 0,9912
+    </div>
+
+    <!-- Tabela representando a grade do gráfico -->
+    <table class="grafico-tabela">
+      <tr>
+        <td class="eixo-y">4,5</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">4</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+        <td><span class="ponto ponto-6"></span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">3,5</td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td><span class="ponto ponto-5"></span></td>
+        <td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">3</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">2,5</td>
+        <td></td><td></td><td></td><td></td>
+        <td><span class="ponto ponto-4"></span></td>
+        <td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">2</td>
+        <td></td><td></td><td></td>
+        <td><span class="ponto ponto-3"></span></td>
+        <td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">1,5</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">1</td>
+        <td></td><td></td>
+        <td><span class="ponto ponto-2"></span></td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">0,5</td>
+        <td></td>
+        <td><span class="ponto ponto-1"></span></td>
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td class="eixo-y">0</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <!-- Rótulos do Eixo X -->
+      <tr class="eixo-x">
+        <td></td>
+        <td>0,00</td>
+        <td>0,10</td>
+        <td>0,20</td>
+        <td>0,30</td>
+        <td>0,40</td>
+        <td>0,50</td>
+        <td>0,60</td>
+        <td>0,70</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
+ <br>
+    
+<br>
+  <title>Gráfico de Ângulo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #555;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    /* Estilização da Tabela Gráfica */
+    .grafico-tabela {
+      border-collapse: collapse;
+      width: 100%;
+      position: relative;
+    }
+
+    .grafico-tabela td {
+      border: 1px solid #e0e0e0;
+      height: 35px;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    /* Rótulos dos eixos */
+    .eixo-y {
+      width: 50px;
+      text-align: right !important;
+      padding-right: 10px;
+      border: none !important;
+      color: #555;
+    }
+
+    .eixo-x td {
+      border: none !important;
+      height: 30px;
+      color: #555;
+    }
+
+    /* Estilo dos pontos no gráfico */
+    .ponto {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      transform: translate(-50%, 50%);
+    }
+
+    .serie1 { background-color: #4682B4; } /* Azul */
+    .serie2 { background-color: #C0504D; } /* Vermelho */
+
+    /* Posições dos pontos dentro das células correspondentes */
+    /* Coluna 0,1 */
+    .ponto-s1-1 { left: 0%; bottom: 0%; }
+    .ponto-s2-1 { left: 0%; bottom: 10%; }
+
+    /* Coluna 0,2 */
+    .ponto-s1-2 { left: -25%; bottom: 75%; }
+    .ponto-s2-2 { left: -25%; bottom: 20%; }
+
+    /* Coluna 0,4 */
+    .ponto-s1-3 { left: -25%; bottom: 0%; }
+    .ponto-s2-3 { left: -25%; bottom: 80%; }
+
+    /* Coluna 0,6 */
+    .ponto-s1-4 { left: -40%; bottom: 10%; }
+    .ponto-s2-4 { left: -40%; bottom: 20%; }
+
+    /* Coluna 0,8 */
+    .ponto-s1-5 { left: -10%; bottom: 50%; }
+    .ponto-s2-5 { left: -10%; bottom: 90%; }
+
+    /* Coluna 1,0 */
+    .ponto-s1-6 { left: 25%; bottom: 55%; }
+    .ponto-s2-6 { left: 25%; bottom: 90%; }
+
+    /* Legenda */
+    .legenda {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .item-legenda {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .bolinha {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Gráfico de Ângulo</h2>
+
+  <!-- Tabela representando a grade do gráfico -->
+  <table class="grafico-tabela">
+    <tr>
+      <td class="eixo-y">1,08</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">1,07</td>
+      <td></td><td></td><td></td><td></td><td></td>
+      <td><span class="ponto serie2 ponto-s2-6"></span></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">1,06</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">1,05</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">1,04</td>
+      <td></td><td></td><td></td><td></td>
+      <td><span class="ponto serie2 ponto-s2-5"></span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">1,03</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">1,02</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">1,01</td>
+      <td></td>
+      <td><span class="ponto serie1 ponto-s1-2"></span></td>
+      <td><span class="ponto serie2 ponto-s2-3"></span></td>
+      <td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">1</td>
+      <td>
+        <span class="ponto serie1 ponto-s1-1"></span>
+        <span class="ponto serie2 ponto-s2-1"></span>
+      </td>
+      <td><span class="ponto serie2 ponto-s2-2"></span></td>
+      <td><span class="ponto serie1 ponto-s1-3"></span></td>
+      <td>
+        <span class="ponto serie1 ponto-s1-4"></span>
+        <span class="ponto serie2 ponto-s2-4"></span>
+      </td>
+      <td><span class="ponto serie1 ponto-s1-5"></span></td>
+      <td><span class="ponto serie1 ponto-s1-6"></span></td>
+    </tr>
+    <tr>
+      <td class="eixo-y">0,99</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+
+    <!-- Rótulos do Eixo X -->
+    <tr class="eixo-x">
+      <td></td>
+      <td>0</td>
+      <td>0,2</td>
+      <td>0,4</td>
+      <td>0,6</td>
+      <td>0,8</td>
+      <td>1</td>
+      <td>1,2</td>
+    </tr>
+  </table>
+
+  <!-- Legenda inferior -->
+  <div class="legenda">
+    <div class="item-legenda">
+      <span class="bolinha serie1"></span> Série1
+    </div>
+    <div class="item-legenda">
+      <span class="bolinha serie2"></span> Série2
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+  
     </section>
 
     <!-- Seção 5: Resultados -->
