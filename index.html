@@ -353,6 +353,97 @@
         </tbody>
     </table>
 <br>
+
+<br>
+  <title>Tabela de Dados do Pêndulo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .tabela-dados {
+      border-collapse: collapse;
+      font-size: 16px;
+      color: #000000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* Cabeçalho Laranja */
+    .tabela-dados th {
+      background-color: #E26B00;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 10px 16px;
+      text-align: center;
+      border: 1px solid #d0d0d0;
+    }
+
+    /* Células de Dados */
+    .tabela-dados td {
+      padding: 8px 16px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+    }
+
+    /* Alternância leve de cor nas linhas (opcional para visual idêntico) */
+    .tabela-dados tbody tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+  </style>
+</head>
+<body>
+
+<table class="tabela-dados">
+  <thead>
+    <tr>
+      <th>Comprimento (m)</th>
+      <th>Média (s)</th>
+      <th>Período</th>
+      <th>Período²</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0,20</td>
+      <td>8,26</td>
+      <td>0,826</td>
+      <td>0,682276</td>
+    </tr>
+    <tr>
+      <td>0,30</td>
+      <td>11,63</td>
+      <td>1,163</td>
+      <td>1,352569</td>
+    </tr>
+    <tr>
+      <td>0,40</td>
+      <td>14,17</td>
+      <td>1,417</td>
+      <td>2,007889</td>
+    </tr>
+    <tr>
+      <td>0,50</td>
+      <td>16,21</td>
+      <td>1,621</td>
+      <td>2,627641</td>
+    </tr>
+    <tr>
+      <td>0,60</td>
+      <td>18,7</td>
+      <td>1,87</td>
+      <td>3,4969</td>
+    </tr>
+    <tr>
+      <td>0,70</td>
+      <td>19,97</td>
+      <td>1,997</td>
+      <td>3,988009</td>
+    </tr>
+  </tbody>
+</table>
+<br>
 <br>
   <title>Gráfico T X L</title>
   <style>
@@ -508,7 +599,7 @@
 
 
   <br>
-  <title>Gráfico de p² com Tabela</title>
+  <title>Gráfico de T² com Tabela</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -673,11 +764,109 @@
     </table>
   </div>
 </div>
-
-</body>
-</html>
  <br>
-    
+  <title>Tabela de Dados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .tabela-dados {
+      border-collapse: collapse;
+      font-size: 15px;
+      color: #000000;
+    }
+
+    /* Cabeçalho Azul Escuro */
+    .tabela-dados th {
+      background-color: #175865;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 6px 12px;
+      text-align: right;
+      border: 1px solid #d0d0d0;
+    }
+
+    /* Células de Dados */
+    .tabela-dados td {
+      padding: 5px 12px;
+      text-align: right;
+      border: 1px solid #e0e0e0;
+    }
+
+    /* Ajuste de alinhamento visual */
+    .tabela-dados th:first-child,
+    .tabela-dados td:first-child {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<table class="tabela-dados">
+  <thead>
+    <tr>
+      <th>Ângulo</th>
+      <th>Rad</th>
+      <th>Media</th>
+      <th>Periodo</th>
+      <th>Razao esp</th>
+      <th>modelo teo.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>0,0873</td>
+      <td>14,03</td>
+      <td>1,403</td>
+      <td>1</td>
+      <td>1,0005</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>0,1745</td>
+      <td>14,13</td>
+      <td>1,413</td>
+      <td>1,0071</td>
+      <td>1,0019</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>0,3491</td>
+      <td>14,03</td>
+      <td>1,403</td>
+      <td>1</td>
+      <td>1,0076</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>0,5236</td>
+      <td>14,04</td>
+      <td>1,404</td>
+      <td>1,0007</td>
+      <td>1,00171</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>0,7854</td>
+      <td>14,09</td>
+      <td>1,409</td>
+      <td>1,0043</td>
+      <td>1,0386</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>1,0472</td>
+      <td>14,1</td>
+      <td>1,41</td>
+      <td>1,005</td>
+      <td>1,0685</td>
+    </tr>
+  </tbody>
+</table>
 <br>
   <title>Gráfico de Ângulo</title>
   <style>
